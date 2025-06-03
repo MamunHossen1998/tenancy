@@ -14,7 +14,7 @@ class SeedTenantIbnProducts extends Command
 
     public function handle()
     {
-        $tenant = Tenant::where('id', 'ibn')->first();
+        $tenant = Tenant::where('id', 'labaid')->first();
 
         if (! $tenant) {
             $this->error('Tenant ibn not found.');

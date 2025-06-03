@@ -8,14 +8,16 @@ use Illuminate\Database\Seeder;
 
 class TenantSeeder extends Seeder
 {
+
+    public TenantSeederService $tenant_seeder_service;
+
     /**
      * Run the database seeds.
      */
-    private TenantSeederService $tenant_seeder_service;
 
-    public function __construct(TenantSeederService $tenant_seeder_service)
+    public function __construct()
     {
-        $this->tenant_seeder_service = $tenant_seeder_service;
+        $this->tenant_seeder_service = new TenantSeederService();
     }
 
     public function run(): void
